@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+
 public class Search2dArray {
     /**
      * Receive a 2d array of ints. (That's an array of arrays!)
@@ -10,6 +12,18 @@ public class Search2dArray {
      * @return true if nums contains target, and false otherwise.
      */
     public boolean search(int[][] nums, int target){
-        return false;
+        boolean findMatchingValue = false;
+        for (int row = 0; row < nums.length; row++ )
+        {
+            for (int column = 0; column < nums[0].length; column++)
+            {
+                if (nums[row][column] == target)
+                findMatchingValue = true;
+
+            }
+        }
+    
+     return findMatchingValue;
+
     }
 }
